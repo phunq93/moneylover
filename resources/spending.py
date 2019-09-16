@@ -41,9 +41,9 @@ class Spending(Resource):
 		args = self.reqparse.parse_args()
 		spending = {
 			'amount': args.amount,
-			'group': args.group,
+			'group' : args.group,
 			'detail': args.detail,
-			'date': args.date,
+			'date'  : args.date,
 			'wallet': args.wallet,
 		}
 		spendings_collection.update_one({'_id': ObjectId(_id)}, {'$set': spending})
